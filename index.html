@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vickky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kablammo&family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kablammo&family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kablammo&family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Gloria+Hallelujah&family=Great+Vibes&family=Kablammo&family=Lobster&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sacramento&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    
+    
+    
+   
+    
+    <div class="wall-container">
+        <div class="balloon-container">
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+        </div>
+        <div class="flower-container">
+            <div class="flower">🌸</div>
+            <div class="flower">🌼</div>
+            <div class="flower">🌺</div>
+            <div class="flower">💐</div>
+            <div class="flower">🌷</div>
+            <div class="flower">🌼</div>
+            <div class="flower">🌷</div>
+            <div class="flower">🌺</div>
+            <div class="flower">💐</div>
+        </div>
+        
+        <h1>Welcome!</h1>
+        <button class="button" onclick="revealMessages()">Reveal Messages</button>
+        <div id="messages">
+            <div class="message">
+                <video src="./ezgif-8d2cc5fd1099d4.mp4" controls ></video>
+            </div>
+
+            <p class="message">Happy Birthday, Amor 💕</p>
+
+            <p class="message">Today is a special day because it marks the moment the love of my life was born.</p>
+
+            <p class="message">I can’t begin to express how grateful I am to have you in my world. You bring light, love, and joy into my life every single day, and I am endlessly blessed to call you mine.</p>
+
+            <p class="message">From the moment we met, you became my happiness, my peace, and my greatest adventure.</p>
+
+            <p class="message"> Your kindness, your laughter, and the way you make everything feel right amaze me more and more.</p>
+
+
+            <p class="message"> No words can truly describe how much I love and cherish you.</p>
+
+            <p class="message"> May this new year of your life bring you even more blessings and unforgettable moments. </p>
+
+            <p class="message">I promise to stand by your side, to love you endlessly, and to make every day feel like your birthday.</p>
+            
+            <p class="message">On this special day, I want you to know that you deserve all the love, happiness, and success in the world. </p>
+
+            <p class="message"> So today, my love, make a wish and blow out the candles, knowing that my heart will always belong to you. 💕</p>
+
+            <p class="message">💕 I love you more than words can say! 💕</p>
+            <div class="fun">
+                <a  href="https://open.spotify.com/playlist/39kioAnYXQHEvCJHsVTiQn?si=6sO8aCa-Sz2WjyQQ0VT9yA&pi=e-ViaCcu9FRtOs"> Click me </a>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script>
+        gsap.utils.toArray(".balloon").forEach((balloon) => {
+            gsap.to(balloon, {
+                y: "-120vh",
+                duration: Math.random() * 3 + 4,
+                repeat: -1,
+                ease: "linear",
+                delay: Math.random() * 2
+            });
+
+            // Random horizontal position for each balloon
+            gsap.set(balloon, { left: Math.random() * 100 + "%" });
+        });
+
+        // GSAP Animation for Floating Flowers (Under Balloons)
+        gsap.utils.toArray(".flower").forEach((flower) => {
+            gsap.to(flower, {
+                y: "-120vh",
+                duration: Math.random() * 5 + 6,
+                repeat: -1,
+                ease: "linear",
+                delay: Math.random() * 3
+            });
+
+            // Random horizontal position for each flower
+            gsap.set(flower, { left: Math.random() * 100 + "%" });
+        });
+        function revealMessages() {
+            const messages = document.querySelectorAll('.message');
+            messages.forEach((msg, index) => {
+                setTimeout(() => {
+                    msg.classList.add('show');
+                }, index * 1000);
+            });
+        }
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    text-align: center;
+    background-color: #FFDAB9;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.balloon-container, .flower-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balloon,.flower {
+    font-size: 3rem; 
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp 6s linear infinite;
+}
+
+.balloon:nth-child(1) { left: 10%; animation-duration: 11s; }
+.balloon:nth-child(2) { left: 30%; animation-duration: 12s; }
+.balloon:nth-child(3) { left: 60%; animation-duration: 13s; }
+.balloon:nth-child(4) { left: 100%; animation-duration: 14s; }
+.balloon:nth-child(5) { left: 110%; animation-duration: 15s; }
+.balloon:nth-child(5) { left: 120%; animation-duration: 16s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+}
+.flower:nth-child(1) { left: 10%; animation-duration: 17s; }
+.flower:nth-child(2) { left: 30%; animation-duration: 18s; }
+.flower:nth-child(3) { left: 60%; animation-duration: 19s; }
+.flower:nth-child(4) { left: 80%; animation-duration:21s; }
+.flower:nth-child(4) { left: 100%; animation-duration:22s; }
+.flower:nth-child(4) { left: 110%; animation-duration:23s; }
+.flower:nth-child(4) { left: 120%; animation-duration:24s; }
+.flower:nth-child(4) { left: 130%; animation-duration:25s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.message video
+{
+    height: 100px;
+    width: 80%;
+}
+.wall-container {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: relative;
+    top: 65%;
+}
+.message {
+    font-size: 1.5em;
+    color:#B76E79;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    font-family: cookie;
+}
+a{
+    font-size: 20px;
+    color: white;
+    font-family: Lobster;
+}
+.fun
+{
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-radius: 50px;
+    background: #B76E79;
+    padding-top: 15px;
+}
+.message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.button {
+    padding: 10px 20px;
+    background-color: #B76E79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    font-family: Gloria Hallelujah ;
+}
+h1
+{
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: Kablammo;
+    color: #B76E79;
+}
