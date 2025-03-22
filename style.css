@@ -75,19 +75,24 @@ body {
     transition: opacity 1s ease, transform 1s ease;
     font-family: cookie;
 }
-a{
+#spotify{
     font-size: 20px;
     color: white;
     font-family: Lobster;
-}
-.fun
-{
-    height: 50px;
-    width: 300px;
+    height: 50px !important;
+    width: 500px !important;
     border: none;
     border-radius: 50px;
     background: #B76E79;
     padding-top: 15px;
+    position: relative;
+    left: 50px;
+
+}
+a
+{
+    text-decoration: none;
+    color: white;
 }
 .message.show {
     opacity: 1;
